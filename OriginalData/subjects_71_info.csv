@@ -1,0 +1,72 @@
+﻿number,ID,group,age,gender,BMI,disease_month,SF-36,PRI,FS-14
+1,sub001,patient,56 ,female,19.71 ,120 ,56.1875,4,9
+2,sub002,patient,56 ,female,28.04 ,180 ,39.875,18,11
+3,sub003,patient,23 ,female,22.27 ,27 ,49.875,8,9
+4,sub004,patient,61 ,female,22.27 ,120 ,62.9375,6,14
+5,sub005,patient,35 ,female,18.69 ,120 ,64.75,3,9
+6,sub006,patient,25 ,male,21.20 ,12 ,53.10416667,1,7
+7,sub007,patient,25 ,male,22.04 ,13 ,60.64583333,5,10
+8,sub008,patient,36 ,female,22.58 ,36 ,65.83333333,0,9
+9,sub009,patient,29 ,male,24.97 ,8 ,44.5625,15,10
+10,sub010,patient,39 ,male,25.95 ,10 ,52.25,14,14
+11,sub011,patient,44 ,male,24.57 ,8 ,45.0625,5,7
+12,sub012,patient,25 ,female,22.86 ,48 ,47.8125,13,11
+13,sub013,patient,24 ,female,19.91 ,7 ,65.10416667,3,8
+14,sub014,patient,50 ,female,23.44 ,60 ,49.29166667,5,11
+15,sub015,patient,41 ,female,22.03 ,14 ,49,5,11
+16,sub016,patient,51 ,female,29.14 ,12 ,95.1875,0,8
+17,sub017,patient,26 ,female,19.83 ,6 ,56.0625,12,8
+18,sub018,patient,43 ,female,25.39 ,12 ,83.6875,2,3
+19,sub019,patient,33 ,male,26.30 ,12 ,55.5,4,11
+20,sub020,patient,41 ,female,21.26 ,15 ,41.375,6,12
+21,sub021,health,24 ,female,20.31 ,NA,74.22916667,1,8
+22,sub022,health,59 ,female,25.71 ,NA,85.4375,1,5
+23,sub023,health,40 ,female,21.23 ,NA,91.9375,0,0
+24,sub024,health,54 ,male,25.95 ,NA,92.6875,0,0
+25,sub025,health,61 ,male,25.51 ,NA,91.02083333,1,3
+26,sub026,health,25 ,male,21.72 ,NA,83.8125,3,2
+27,sub027,health,25 ,female,20.08 ,NA,80.25,1,7
+28,sub028,health,24 ,male,20.57 ,NA,75.83333333,5,2
+29,sub029,health,26 ,female,17.80 ,NA,77.16666667,2,10
+30,sub030,health,25 ,female,29.21 ,NA,90.52083333,1,3
+31,sub031,health,25 ,female,18.82 ,NA,80.375,0,2
+32,sub032,health,26 ,male,21.47 ,NA,99.9375,0,0
+33,sub033,health,33 ,female,22.04 ,NA,85.02083333,3,7
+34,sub034,health,28 ,female,16.77 ,NA,59.9375,6,12
+35,sub035,health,25 ,female,19.38 ,NA,97.8125,1,1
+36,sub036,health,24 ,female,20.08 ,NA,82.8125,1,4
+37,sub037,health,46 ,male,23.39 ,NA,90.5625,0,2
+38,sub038,health,33 ,male,27.76 ,NA,43.75,6,7
+39,sub039,health,26 ,female,17.93 ,NA,87.1875,0,3
+40,sub040,health,28 ,female,20.32 ,NA,72.5,2,11
+41,sub081,patient,25 ,female,19.96 ,62 ,38.27777778,15,12
+42,sub082,patient,23 ,female,22.03 ,7 ,62.33333333,3,7
+43,sub083,patient,23 ,female,22.19 ,6 ,60.16666667,11,7
+44,sub084,patient,23 ,female,19.84 ,12 ,60.37037037,4,8
+45,sub085,patient,26 ,female,21.48 ,25 ,58.72222222,9,10
+46,sub086,patient,23 ,female,22.60 ,18 ,34,16,14
+47,sub087,patient,41 ,female,20.96 ,144 ,41.05555556,7,12
+48,sub088,patient,24 ,female,20.32 ,66 ,49.16666667,6,8
+49,sub089,patient,40 ,male,21.72 ,60 ,39.66666667,8,13
+50,sub090,patient,60 ,male,24.22 ,147 ,81.55555556,2,13
+51,sub091,patient,39 ,female,19.10 ,84 ,33.94444444,15,12
+52,sub092,patient,33 ,female,20.83 ,241 ,43.90740741,15,13
+53,sub093,patient,23 ,female,26.26 ,11 ,44.81481481,7,12
+54,sub094,patient,46 ,male,23.88 ,267 ,73.55555556,3,9
+55,sub095,patient,47 ,male,23.39 ,123 ,79.7962963,3,12
+56,sub096,patient,24 ,female,22.49 ,24 ,32.83333333,8,14
+57,sub097,health,23 ,male,25.54 ,NA,86.22222222,1,4
+58,sub098,health,60 ,male,22.77 ,NA,75.90740741,1,7
+59,sub099,health,26 ,female,17.58 ,NA,79.66666667,2,4
+60,sub100,health,24 ,female,22.03 ,NA,87.55555556,1,2
+61,sub101,health,25 ,female,25.39 ,NA,76.07407407,6,2
+62,sub102,health,24 ,female,22.89 ,NA,82.38888889,3,2
+63,sub103,health,25 ,female,19.72 ,NA,72.90740741,5,13
+64,sub127,patient,25 ,male,25.95 ,34 ,40.66666667,5,11
+65,sub128,health,24 ,female,20.43 ,NA,90.33333333,0,0
+66,sub129,health,24 ,female,19.10 ,NA,82.24074074,1,7
+67,sub130,health,24 ,female,22.94 ,NA,92.66666667,0,4
+68,sub131,health,25 ,male,19.27 ,NA,83.27777778,2,10
+69,sub132,health,24 ,female,21.89 ,NA,87.44444444,3,1
+70,sub133,health,27 ,female,22.76 ,NA,95.77777778,0,0
+71,sub134,health,24 ,female,20.52 ,NA,78.05555556,1,8
