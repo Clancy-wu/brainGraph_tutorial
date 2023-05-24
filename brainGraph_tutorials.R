@@ -65,6 +65,21 @@ setkey(destrieux, index)
 ## setorder(destrieux, index)  is similar with setkey.
 atlas = 'destrieux'
 g <- g.group <- vector('list', length(thresholds))
+# Absolute graph
+# Because Structural Covariance Network uses residual values to make graph, so there are only positive values
+# and you donot need to worry about the positive or negative values.
+
+# unweighted graph: ignore parameters "weighting" and "weighted"
+############ binary graph
+# A.norm.sub <- my.mats$A.norm.sub
+# for (i in seq_along(densities)){
+#  A.norm.sub[[i]][A.norm.sub[[i]] > 0 ] = 1
+#}
+############ weighted graph
+A.norm.sub <- my.mats$A.norm.sub
+############ end
+
+# weigted graph: set weighting='sld
 for (j in seq_along(thresholds)) {
   g[[j]] <- make_brainGraphList(A.norm.sub[[j]], atlas, modality = 'dti', 
                                 weighting = 'sld', threshold = thresholds[j],
