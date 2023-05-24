@@ -75,6 +75,13 @@ g <- g.group <- vector('list', length(thresholds))
 # for (i in seq_along(densities)){
 #  A.norm.sub[[i]][A.norm.sub[[i]] > 0 ] = 1
 #}
+for (j in seq_along(densities)) {
+  # subjects in all densities weighted graphs
+  g[[j]] <- make_brainGraphList(A.norm.sub[[j]], atlas, modality = 'fmri',
+                                threshold = densities[j], weighted = NULL,
+                                gnames = covars.all$participant_id,
+                                grpNames = covars.all$group )
+}
 ############ weighted graph
 A.norm.sub <- my.mats$A.norm.sub
 ############ end
