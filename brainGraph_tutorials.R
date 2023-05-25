@@ -107,6 +107,20 @@ idvars <- c('modality', 'atlas', 'weighting', 'threshold', 'Group')
 dt.G.long <- melt(dt.G, id.vars = c(idvars, 'Study.ID', 'density'))
 dt.G.group.long <- melt(dt.G.group, id.vars = c(idvars, 'Study.ID', 'density'))
 
+############ compute AUC value for a special indicator
+# method 1
+library(zoo)
+x <- seq(0.05, 0.5, 0.05) # horizontal ordinate
+y <- as.numeric(df.all[1,]) # longitudinal coordinates
+id <- order(x)
+AUC <- sum(diff(x[id])*rollmean(y[id],2)) # matched
+
+# method 2 (recommend)
+library(pracma)
+trapz(x,y)
+
+##############
+
 #### mean degree for the group-averaged graphs
 dt.V.group[, .(mean.degree = mean(degree)), by = .(Group, threshold, lobe)]
 #### t-test of nodal efficiency for Frontal lobe vertices
