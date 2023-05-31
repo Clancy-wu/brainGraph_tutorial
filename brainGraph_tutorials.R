@@ -190,7 +190,7 @@ summary(brainGraph_GLM(g[[1]], measure = 'E.nodal.wt', covars = BaseInformation,
 BaseInformation <- covars.dti[, c(2,3,5)]
 X <- brainGraph_GLM_design(BaseInformation, coding = 'cell.means', 
                            center.by = c('group', 'gender'), int = c('group', 'gender'))
-CompareMatrix <- matrix(c(0, 0, 1, -1), nrow=1, dimnames=list('Group X Gender'))
+CompareMatrix <- matrix(c(0, 0, 1, -1), nrow=1, dimnames=list('Group X Gender')) # 4 cols
 
 summary(brainGraph_GLM(g[[1]], measure = 'E.nodal.wt', covars = BaseInformation,
                        X=X, contrasts = CompareMatrix, alt = 'two.sided'))
@@ -255,7 +255,7 @@ mtpc.diffs.sig.dt <-
 ###############################################################################
 BaseInformation <- covars.dti[, 2:6]
 X <- brainGraph_GLM_design(BaseInformation, coding = 'effects', binarize = 'gender')
-con.mat <- matrix(c(rep(0, 4), 2), nrow = 1, dimnames = list('Control > Patient '))
+con.mat <- matrix(c(rep(0, 4), 2), nrow = 1, dimnames = list('Control > Patient ')) # 5 cols
 res.nbs <- NBS(my.mats$A, covars = BaseInformation, contrasts = con.mat, X=X,
                   p.init = 0.001, N=1e3, alternative ='greater', long = TRUE,
                   part.method = 'guttman')
@@ -274,7 +274,22 @@ V(igraph_result)$name[ V(igraph_result)$p.nbs > 0] # specific nodes with p value
 E(igraph_result) # edges
 E(igraph_result)$weight # edge weights
 E(igraph_result)$dist # edge distances
+##########################
+covars.matrix <- covars.all[, .(age, gender, `BMI`, group),]
+con.mat <- cbind(0, 0, 0, 0, c(-2,2))
+rownames(con.mat) <- c('Control > Patient', "Patient > Control")
+X <- brainGraph_GLM_design(covars.matrix, coding = 'effects', binarize = 'gender')
+## Fiber Network
+matfiles <- list.files('NetFiber/', pattern='sub-sub', full.names = T)
+my.mats <- create_mats(matfiles, modality = 'dti',threshold.by = 'density',
+                       mat.thresh = densities, inds = inds)
 
+## weighted
+res.nbs <- NBS(my.mats$A, covars.matrix, con.mat, X=X, p.init=0.001, N=1e3, alternative='greater', long=T,
+               part.method = 'ridgway')
+summary(res.nbs)
+g.nbs <- make_brainGraphList(res.nbs, atlas)  
+plot(g.nbs[2], alpha=0.05)                       
 ################################################################################
 ## Mediation analysis
 #medVars[.('graph', x, y), on=c('level','outcome','mediator'), treat]
