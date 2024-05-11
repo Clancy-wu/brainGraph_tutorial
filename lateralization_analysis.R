@@ -18,7 +18,7 @@ grps = c('health', 'patient')
 ## This is processed in python script. For functional network, the pearson 
 ## correlation between two nodes is defined as the edge. For structural network,
 ## the sfit2_invnodevol_count-sum between two nodes is defined as the edge.
-## The diagonal in functional network is 1 and in structural network is 0.
+## The diagonal in functional network is 0 and in structural network is 0.
 
 ## CFS
 ## Functional network: NetFunc / CFS / PearCor_sub-subxxx.txt
