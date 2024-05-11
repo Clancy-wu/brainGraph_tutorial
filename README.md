@@ -10,7 +10,7 @@ This tutorial included my data and code. I have run it successfully in my Window
 1. Here are [some notes](https://editor.csdn.net/md/?articleId=128781466) written by me, but with Chinese lauguage.
 2. Here are the [result validations](https://editor.csdn.net/md/?articleId=129985875) between GRETNA (another commonly used software) and brainGraph. The conclusion is that results of both two are **totally same** (much great!), in spite of their different names of multiple network building. Specifically, the "Network Sparsity" in GRETNA responses to "density" in brainGraph, while the "Value of matrix element" in GRETNA responses to "threshold" in brainGraph.
 
-**update May 11 2024**
+**Update May 11 2024**
 
 I have uploaded a script 'lateralization_analysis.R'.
 Previously, I have succesfully run fmriprep + qsiprep in my clinic data (Chronic Fatigue Syndrome) and the big population data (ISYB https://doi.org/10.11922/sciencedb.00740), getting the files of MNI sapce preprocessed Bold file and whole-brain-track tck file.
