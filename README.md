@@ -26,7 +26,11 @@ for my data and I have already preparing my article. Hope you can also get helps
 Despite many shortages of brainGraph, I think this package is greater than GREATNA and BrainConnectome Toolbox and others similar tools.
 
 Sincerely yours,
+
 Kang.
+
 Department of Neurology, University of Iowa.
+
 kangwu@uiowa.edu
+
 clancy_wu@126.com
