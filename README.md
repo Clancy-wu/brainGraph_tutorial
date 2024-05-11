@@ -14,9 +14,12 @@ This tutorial included my data and code. I have run it successfully in my Window
 
 I have uploaded a script 'lateralization_analysis.R'.
 Previously, I have succesfully run fmriprep + qsiprep in my clinic data (Chronic Fatigue Syndrome) and the big population data (ISYB https://doi.org/10.11922/sciencedb.00740), getting the files of MNI sapce preprocessed Bold file and whole-brain-track tck file.
+
 Then I used brainnectome atlas (246 ROIs) to compute the functional network and fiber network. Additionally, I have split those two
 networks to three types of absolute network, positive network, and negative network, respectively.
+
 After all preparing, I used this lateralization_analysis.R to compute network properties with brainGraph.
+
 We know that the brainGraph reports errors frequently and is hard for new researchers who are not familiar with R software, especially 
 the author of brainGraph seems not focusing on this package (from my guess). So I hope this tutorial finds you well. This tutorial works
 for my data and I have already preparing my article. Hope you can also get helps from my script if you are also interested to brainGraph.
