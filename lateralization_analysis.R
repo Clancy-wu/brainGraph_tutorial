@@ -21,11 +21,11 @@ grps = c('health', 'patient')
 ## The diagonal in functional network is 0 and in structural network is 0.
 
 ## CFS
-## Functional network: NetFunc / CFS / PearCor_sub-subxxx.txt
+## Functional network: NetFunc / CFS / PearCorz_sub-subxxx.txt
 ## Fiber network: NetFiber / CFS / Connectome_sub-subxxx.txt
 
 ## large population
-## Functional network: NetFunc / ISYB / PearCor_sub-xxx.txt
+## Functional network: NetFunc / ISYB / PearCorz_sub-xxx.txt
 ## Fiber network: NetFiber / ISYB / Connectome_sub-xxx.txt
 
 ## split network to positive & negative & absolute
@@ -39,7 +39,7 @@ grps = c('health', 'patient')
 ## network similarity
 
 ## Network contains positive & negative & absolute
-densities <- seq(0.01, 0.34, 0.01)
+densities <- seq(0.10, 0.50, 0.01)
 atlas = 'brainnetome'
 ## --------------------------------------------------------------------------
 save2dataframe <- function(data, file_path_suffix){
