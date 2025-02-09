@@ -1,0 +1,27 @@
+library(data.table)
+library(brainGraph)
+
+options(bg.subject_id='participant_id', bg.group='all_group')
+lhrh <- fread('BrainGraphRDS/CFS_thickness_mat_exclude_Subject_019.csv')
+# sort name
+load('brainnetome_surface.rda')
+assign("brainnetome", brainnetome_surface, envir = .GlobalEnv)
+setkey(brainnetome_surface, index)
+newname <- c('participant_id', brainnetome_surface$name)
+colnames(lhrh) <- newname
+# begin
+covars.all <- fread('subs_146_info.csv')
+covars.all = covars.all[subject!='Subject_019', ]
+covars.all[, sex := as.factor(sex)]
+covars <- covars.all[,c('age', 'sex', 'BMI', 'participant_id', 'all_group')]
+
+myResids <- get.resid(lhrh, covars, atlas = 'brainnetome', exclude.cov = 'all_group')
+
+densities <- seq(0.25, 0.30, 0.05)
+corrs <- corr.matrix(myResids, densities=densities)
+
+g <- lapply(seq_along(densities), function(x) 
+  make_brainGraphList(corrs[x], modality='thickness'))
+
+dt.G <- rbindlist(lapply(g, graph_attr_dt))  
+dt.V <- rbindlist(lapply(g, vertex_attr_dt))
